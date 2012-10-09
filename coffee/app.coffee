@@ -1,7 +1,6 @@
-# create html5 elements
+# browser detection
 
-document.createElement "header"
-document.createElement "footer"
-document.createElement "nav"
-document.createElement "section"
-document.createElement "article"
+body = document.getElementsByTagName("body")[0]
+
+if navigator.userAgent.match(/MSIE/)
+  body.className = "ie"

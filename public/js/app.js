@@ -1,13 +1,10 @@
 (function() {
+  var body;
 
-  document.createElement("header");
+  body = document.getElementsByTagName("body")[0];
 
-  document.createElement("footer");
-
-  document.createElement("nav");
-
-  document.createElement("section");
-
-  document.createElement("article");
+  if (navigator.userAgent.match(/MSIE/)) {
+    body.className = "ie";
+  }
 
 }).call(this);

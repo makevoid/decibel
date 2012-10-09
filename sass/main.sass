@@ -14,12 +14,14 @@
 
 // reset (minimal)
 
+*
+  border: 0
+
 body, h1
   margin: 0
 
 a
   text-decoration: none
-  border: 0
 
 .clear
   clear: both
@@ -65,6 +67,9 @@ header h1 img
   max-width: 300px
 
 // layout
+
+body.ie #container
+  background: unquote("rgb(70, 70, 70)")
 
 #container
   background: rgba(70, 70, 70, 0.8)
