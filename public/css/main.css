@@ -45,6 +45,7 @@ header h1 img {
 #container {
   background: rgba(70, 70, 70, 0.8);
   width: 85%;
+  max-width: 1100px;
   margin: 30px auto 50px;
   padding: 1.5% 2% 3%;
   -webkit-border-radius: 20px;
