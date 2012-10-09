@@ -68,7 +68,8 @@ header h1 img {
   margin: 10px 0 0 0;
   display: block;
   float: right;
-  width: 40%; }
+  width: 40%;
+  max-width: 360px; }
 .events article .location {
   font-weight: bold; }
 .events article .time {
