@@ -1,0 +1,32 @@
+*, html, body {
+  padding: 0;
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+body {
+  background: url("/images/bg.jpg") no-repeat center center fixed black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #dddddd; }
+
+a {
+  color: #0055bb; }
+
+nav {
+  font-size: 1.5em; }
+  nav a {
+    font-weight: bold; }
+
+#container {
+  background: rgba(100, 100, 100, 0.8);
+  width: 85%;
+  margin: 30px auto 50px;
+  padding: 1px 2% 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px; }

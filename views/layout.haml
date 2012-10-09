@@ -1,0 +1,18 @@
+%html{ lang: "it-IT" }
+  %head
+    %title Decibel Eventi
+    %link{ rel: "stylesheet", href: "/css/main.css" }
+  %body
+    #container
+      %header
+        %h1
+          / Decibel Eventi
+          %img{ src: "/images/decibel_eventi_logo.png" }
+      %nav
+        - link_to "News"
+        - link_to "Eventi"
+        - link_to "Gallery",  "https://www.facebook.com/decibel.eventi?sk=photos"
+        - link_to "Contatti"
+
+      %section.content= yield
+    %script{ type: "text/javascript", src: "/js/app.js" }

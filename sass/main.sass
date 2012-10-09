@@ -1,0 +1,46 @@
+// sass mixins
+
+=background-size-cover
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -o-border-radius: $radius
+  border-radius: $radius
+
+// reset (minimal)
+
+*, html, body
+  padding: 0
+  margin: 0
+
+a
+  text-decoration: none
+
+// main style
+
+body
+  background: url('/images/bg.jpg') no-repeat center center fixed #000
+  +background-size-cover
+  color: #DDD
+
+a
+  color: #05B
+
+nav
+  font-size: 1.5em
+  a
+    font-weight: bold
+
+// layout
+
+#container
+  background: rgba(100, 100, 100, 0.8)
+  width: 85%
+  margin: 30px auto 50px
+  padding: 1px 2% 20px
+  +border-radius(20px)
