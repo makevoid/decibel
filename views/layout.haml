@@ -7,12 +7,13 @@
       %header
         %h1
           / Decibel Eventi
-          %img{ src: "/images/decibel_eventi_logo.png" }
+          %a{ href: "/" }
+            %img{ src: "/images/decibel_eventi_logo.png" }
       %nav
-        - link_to "News"
-        - link_to "Eventi"
+        - link_to "Eventi",   "/"
         - link_to "Gallery",  "https://www.facebook.com/decibel.eventi?sk=photos"
-        - link_to "Contatti"
+        - link_to "Storia",   "/storia"
+        - link_to "Contatti", "/contatti"
 
       %section.content= yield
     %script{ type: "text/javascript", src: "/js/app.js" }

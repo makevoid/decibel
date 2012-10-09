@@ -10,6 +10,8 @@ gem "dm-migrations"
 gem "haml"
 gem "sass"
 
+gem "rdiscount"
+
 group :development do
   gem "foreman"
   gem "rerun"

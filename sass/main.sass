@@ -14,33 +14,87 @@
 
 // reset (minimal)
 
-*, html, body
-  padding: 0
+body, h1
   margin: 0
 
 a
   text-decoration: none
 
+.clear
+  clear: both
+
+// colors
+
+$bg: #111
+$text: #DDD
+$links: #09E
+
 // main style
 
+@font-face
+  font-family: 'UbuntuCondensed'
+  src:  url('/fonts/ubuntu_condensed.eot')
+  src:  url('/fonts/ubuntu_condensed.eot?#iefix') format('embedded-opentype'), url('/fonts/ubuntu_condensed.woff') format('woff'), url('/fonts/ubuntu_condensed.ttf') format('truetype'), url('/fonts/ubuntu_condensed.svg#UbuntuCondensed') format('svg')
+
 body
-  background: url('/images/bg.jpg') no-repeat center center fixed #000
+  background: url('/images/bg.jpg') no-repeat center center fixed $bg
   +background-size-cover
-  color: #DDD
+  color: $text
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif
 
 a
-  color: #05B
+  color: $links
+a:hover
+  color: $links + #333
+
+nav, h1
+  font-family: UbuntuCondensed, Impact
 
 nav
   font-size: 1.5em
+  margin: 15px 0 0 0
   a
     font-weight: bold
+    margin: 0 10px 0 0
+
+
+header h1 img
+  width: 30%
+  min-width: 180px
+  max-width: 300px
 
 // layout
 
 #container
-  background: rgba(100, 100, 100, 0.8)
+  background: rgba(70, 70, 70, 0.8)
   width: 85%
   margin: 30px auto 50px
-  padding: 1px 2% 20px
+  padding: 1.5% 2% 3%
   +border-radius(20px)
+
+.content
+  margin: 20px 0 0 0
+  h1
+    font-size: 1.6em
+    margin: 20px 0 15px 0
+
+.content article h1
+  font-size: 1.3em
+  margin: 0 0 7px 0
+
+// eventi
+
+.events article
+  h1
+    span
+      font-size: 0.9em
+  img
+    margin: 10px 0 0 0
+    display: block
+    float: right
+    width: 40%
+
+  .location
+    font-weight: bold
+  .time
+    font-size: 1.1em

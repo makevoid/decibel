@@ -1,32 +1,75 @@
-*, html, body {
-  padding: 0;
+body, h1 {
   margin: 0; }
 
 a {
   text-decoration: none; }
 
+.clear {
+  clear: both; }
+
+@font-face {
+  font-family: "UbuntuCondensed";
+  src: url("/fonts/ubuntu_condensed.eot");
+  src: url("/fonts/ubuntu_condensed.eot?#iefix") format("embedded-opentype"), url("/fonts/ubuntu_condensed.woff") format("woff"), url("/fonts/ubuntu_condensed.ttf") format("truetype"), url("/fonts/ubuntu_condensed.svg#UbuntuCondensed") format("svg"); }
+
 body {
-  background: url("/images/bg.jpg") no-repeat center center fixed black;
+  background: url("/images/bg.jpg") no-repeat center center fixed #111111;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  color: #dddddd; }
+  color: #dddddd;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 a {
-  color: #0055bb; }
+  color: #0099ee; }
+
+a:hover {
+  color: #33ccff; }
+
+nav, h1 {
+  font-family: UbuntuCondensed, Impact; }
 
 nav {
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  margin: 15px 0 0 0; }
   nav a {
-    font-weight: bold; }
+    font-weight: bold;
+    margin: 0 10px 0 0; }
+
+header h1 img {
+  width: 30%;
+  min-width: 180px;
+  max-width: 300px; }
 
 #container {
-  background: rgba(100, 100, 100, 0.8);
+  background: rgba(70, 70, 70, 0.8);
   width: 85%;
   margin: 30px auto 50px;
-  padding: 1px 2% 20px;
+  padding: 1.5% 2% 3%;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   -o-border-radius: 20px;
   border-radius: 20px; }
+
+.content {
+  margin: 20px 0 0 0; }
+  .content h1 {
+    font-size: 1.6em;
+    margin: 20px 0 15px 0; }
+
+.content article h1 {
+  font-size: 1.3em;
+  margin: 0 0 7px 0; }
+
+.events article h1 span {
+  font-size: 0.9em; }
+.events article img {
+  margin: 10px 0 0 0;
+  display: block;
+  float: right;
+  width: 40%; }
+.events article .location {
+  font-weight: bold; }
+.events article .time {
+  font-size: 1.1em; }
