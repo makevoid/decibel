@@ -2,7 +2,8 @@ body, h1 {
   margin: 0; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  border: 0; }
 
 .clear {
   clear: both; }
@@ -13,7 +14,7 @@ a {
   src: url("/fonts/ubuntu_condensed.eot?#iefix") format("embedded-opentype"), url("/fonts/ubuntu_condensed.woff") format("woff"), url("/fonts/ubuntu_condensed.ttf") format("truetype"), url("/fonts/ubuntu_condensed.svg#UbuntuCondensed") format("svg"); }
 
 body {
-  background: url("/images/bg.jpg") no-repeat center center fixed #111111;
+  background: url("/images/bg.jpg") no-repeat center center fixed black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
