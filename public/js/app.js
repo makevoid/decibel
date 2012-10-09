@@ -1,5 +1,13 @@
 (function() {
 
-  console.log("hello coffee!");
+  document.createElement("header");
+
+  document.createElement("footer");
+
+  document.createElement("nav");
+
+  document.createElement("section");
+
+  document.createElement("article");
 
 }).call(this);
