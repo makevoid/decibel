@@ -20,7 +20,10 @@ group :development do
   gem "guard-sass",         require: false
   gem "guard-coffeescript", require: false
   gem "guard-livereload",   require: false
-  # gem "growl"
+  if RUBY_PLATFORM =~ /darwin/i
+    gem "growl"
+    gem "rb-fsevent", "~> 0.9.1"
+  end
 end
 
 group :test do
