@@ -11,10 +11,11 @@
           %a{ href: "/" }
             %img{ src: "/images/decibel_eventi_logo.png" }
       %nav
-        - link_to "Eventi",   "/"
-        - link_to "Gallery",  "https://www.facebook.com/decibel.eventi?sk=photos"
-        - link_to "Storia",   "/storia"
-        - link_to "Contatti", "/contatti"
+        - link_to "Home",             "/"
+        - link_to "Eventi",           "/eventi"
+        - link_to "Foto",  "https://www.facebook.com/decibel.eventi?sk=photos"
+        - link_to "Storia",           "/storia"
+        - link_to "Contatti",         "/contatti"
 
       %section.content= yield
     %script{ type: "text/javascript", src: "/js/app.js" }

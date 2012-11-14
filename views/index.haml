@@ -4,39 +4,5 @@
 %h1 Prossimi Eventi
 
 %section.events
-  %article
-    %h1
-      %span 31 Ottobre ·
-      DYRTYPHONICS + CRISTAL DISTORTION & more
-    %img{ src: "/images/uploads/helloween_2012.jpg" }
-    .location Viper Theatre - Firenze
-    .time 22:00 - 6:00
-
-    %p.description
-      All info announced soon.
-
-    - link_to "Pagina FB Evento", "https://www.facebook.com/events/122623424555285"
-
-  .clear
-
-  %article
-    %h1
-      %span 21 Novembre ·
-      Evento prova 2
-    .location Viper Theatre - Firenze
-    .time 20:00 - 2:00
-
-    %p.description
-      All info announced soon.
-
-  %article
-    %h1
-      %span 12 Dicembre ·
-      Evento prova 3
-    .location Viper Theatre - Firenze
-    .time 20:00 - 2:00
-
-    %p.description
-      All info announced soon.
-
-.clear
+  - articles.each do |article|
+    = partial :article, article

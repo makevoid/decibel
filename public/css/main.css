@@ -81,9 +81,24 @@ body.ie #container {
   font-weight: bold; }
 .events article .time {
   font-size: 1.1em; }
+.events article .year {
+  font-size: 0.7em; }
 
+@media all and (min-width: 1000px) {
+  #container {
+    font-size: 1.1em; } }
+@media all and (max-width: 600px) {
+  #container {
+    font-size: 0.95em;
+    width: 93%; } }
 @media all and (max-width: 400px) {
   .events article img {
     margin: 10px auto;
     width: 95%;
-    float: none; } }
+    float: none; }
+
+  #container {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px; } }

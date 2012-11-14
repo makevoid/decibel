@@ -12,7 +12,11 @@ module Utils
 end
 include Utils
 
+require 'date'
+
 env = ENV["RACK_ENV"] || "development"
 DataMapper.setup :default, "mysql://localhost/decibel_#{env}"
 require_all "#{path}/models"
 DataMapper.finalize
+
+MONTHS = %w(gennaio febbraio marzo aprile maggio giugno luglio agosto settembre ottobre novembre dicembre).map &:capitalize

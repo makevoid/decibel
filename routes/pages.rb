@@ -1,9 +1,16 @@
 class Decibel < Sinatra::Base
+  helpers do
+    def articles
+      Article.next
+    end
+  end
+
   get "/eventi" do
-    haml :index
+    haml :eventi
   end
 
   get "/storia" do
+    @articles = Article.past
     haml :storia
   end
 

@@ -39,6 +39,8 @@ GEM
       em-websocket (>= 0.2.0)
       guard (>= 1.1.0)
       multi_json (~> 1.0)
+    guard-rspec (0.6.0)
+      guard (>= 0.10.0)
     guard-sass (1.0.0)
       guard (>= 1.1.0)
       sass (>= 3.1)
@@ -74,6 +76,7 @@ DEPENDENCIES
   guard
   guard-coffeescript
   guard-livereload
+  guard-rspec
   guard-sass
   haml
   json

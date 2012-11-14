@@ -1,0 +1,18 @@
+%article
+  %h1
+    %span #{article.date_formatted} -
+    = article.title
+  %img{ src: "/images/uploads/#{article.image}.png" }
+  .location
+    - if article.location_url
+      - link_to article.location, article.location_url
+    - else
+      = article.location
+  .time= article.time
+
+  %p.description
+    = article.text
+
+  - link_to "Pagina FB Evento", article.fb_event_page
+
+.clear
