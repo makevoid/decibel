@@ -58,6 +58,28 @@ g: lol
       { d: "baz", e: "long\nlong\ntext", f: "long2\nlong2\ntext2", g: "lol" },
     ]
   },
+  {
+    source: "
+a: foo
+b: bar
+---
+c:
+d: lol
+---
+  ",
+    entities: [
+      { a: "foo", b: "bar" },
+      { c: nil, d: "lol" },
+    ]
+  },
+  {
+    source: "
+a:  \nb: lol
+  ",
+    entities: [
+      { a: nil, b: "lol" },
+    ]
+  },
 ]
 
 describe "SimpleArticleFormat" do

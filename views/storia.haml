@@ -1,11 +1,4 @@
-.col.right
-  %h1 Archivio Eventi
-
-  %section.events
-    - @articles.each do |article|
-      = partial :article, article
-
-.col.left
+.col
   %h1 Storia
 
   :markdown
@@ -23,3 +16,12 @@
     La lunga carellata di presentazione dei primi 4 mesi del 2012 si conclude con l’annuncio dell’esplosivo live show dei **DIGITALISM** a Firenze (1 aprile – Viper Theatre), band più volte paragonata ai daft punk e affiliata alla celebre etichetta francese Kitsunè Music. I primi singoli estratti dal loro ultimo album uscito nel 2011 (2 Hearts, Blitz e Forrest Gump) hanno visto la partecipazione di Julian Casablancas, cantante degli Strokes.
 
     Con questo ultimo nome si conclude il primo aggiornamento del calendario 2012 di Decibel Eventi, continuate a seguirci, nelle prossime settimane saranno molte le novità di cui vi renderemo partecipi!
+
+.col
+  %h1 Archivio Eventi
+
+  %section.events
+    - @articles.each do |article|
+      = partial :article, article
+
+.clear

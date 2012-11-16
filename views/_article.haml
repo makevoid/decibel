@@ -2,7 +2,7 @@
   %h1
     %span #{article.date_formatted} -
     = article.title
-  %img{ src: "/images/uploads/#{article.image}.png" }
+  %img{ src: "/images/uploads/#{article.image}.jpg" }
   .location
     - if article.location_url
       - link_to article.location, article.location_url
@@ -13,6 +13,6 @@
   %p.description
     = article.text
 
-  - link_to "Pagina FB Evento", article.fb_event_page
+  - link_to "Pagina FB Evento", article.fb_event_page if article.fb_event_page
 
 .clear

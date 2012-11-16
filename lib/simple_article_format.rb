@@ -18,13 +18,14 @@ class SimpleArticleFormat
 
   private
 
-  REGEX = /^(\w+):\s+(.+?)$|^(\w+)>([^<]+)</m
+  REGEX = /^(\w+):\s*$|^(\w+):\s*(.*?)$|^(\w+)>([^<]+)</m
 
   def parse_entity(entity_string)
     entity = {}
     entity_string.scan(REGEX).each do |matches|
       name, value = matches.compact
-      entity[name.to_sym] = value.strip
+      value.strip! if value
+      entity[name.to_sym] = value
     end
     return if entity == {}
     entity
