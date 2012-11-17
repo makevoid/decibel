@@ -48,3 +48,9 @@ task :deploy => :environment do
     end
   end
 end
+
+task db: :toprod do
+  `mysqldump -u root #{app_name}_development > db/#{app_name}_development.sql`
+  `scp db/#{app_name}_development.sql #{user}@#{domain}:#{app_name}/db`
+  queue! "mysql -u root --password=#{password} #{app_name}_production < #{current_path}/db/#{app_name}_development.sql"
+end
