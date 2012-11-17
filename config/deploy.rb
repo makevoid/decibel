@@ -12,6 +12,7 @@ set :domain,      'makevoid.com'
 set :deploy_to,   "/www/#{app_name}"
 set :repository,  "git://github.com/makevoid/#{app_name}"
 set :branch,      'master'
+set :password,    File.read(File.expand_path "~/.password").strip
 
 # Manually create these paths in shared/ (eg: shared/config/database.yml) in your server.
 # They will be linked in the 'deploy:link_shared_paths' step.
@@ -49,8 +50,9 @@ task :deploy => :environment do
   end
 end
 
-task db: :toprod do
+desc "Copies the development db to production."
+task :db_toprod do
   `mysqldump -u root #{app_name}_development > db/#{app_name}_development.sql`
-  `scp db/#{app_name}_development.sql #{user}@#{domain}:#{app_name}/db`
-  queue! "mysql -u root --password=#{password} #{app_name}_production < #{current_path}/db/#{app_name}_development.sql"
+  `scp db/#{app_name}_development.sql #{user}@#{domain}:#{deploy_to}/db`
+  queue %[mysql -u root --password=#{password} #{app_name}_production < #{current_path}/db/#{app_name}_development.sql]
 end
