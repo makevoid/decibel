@@ -50,9 +50,26 @@ task :deploy => :environment do
   end
 end
 
+def exe(cmd)
+  # puts "executing: #{cmd}"
+  out = `#{cmd}`
+  puts out
+end
+
+def mysql(cmd)
+  "mysql -u root --password=#{password} #{cmd}"
+end
+
+desc "Creates the production db."
+task :db_create do
+  cmd = mysql "-e 'create database #{app_name}_production';"
+  queue cmd
+end
+
 desc "Copies the development db to production."
 task :db_toprod do
-  `mysqldump -u root #{app_name}_development > db/#{app_name}_development.sql`
-  `scp db/#{app_name}_development.sql #{user}@#{domain}:#{deploy_to}/db`
-  queue %[mysql -u root --password=#{password} #{app_name}_production < #{current_path}/db/#{app_name}_development.sql]
+  exe "mysqldump -u root #{app_name}_development > db/#{app_name}_development.sql"
+  exe "scp db/#{app_name}_development.sql #{user}@#{domain}:#{deploy_to}/current/db"
+  cmd = mysql "#{app_name}_production < #{deploy_to}/current/db/#{app_name}_development.sql"
+  queue cmd
 end

@@ -14,8 +14,11 @@ include Utils
 
 require 'date'
 
+password = File.read(File.expand_path "~/.password").strip
+
 env = ENV["RACK_ENV"] || "development"
-DataMapper.setup :default, "mysql://localhost/decibel_#{env}"
+user = "root:#{password}@" if env == "production"
+DataMapper.setup :default, "mysql://#{user}localhost/decibel_#{env}"
 require_all "#{path}/models"
 DataMapper.finalize
 
